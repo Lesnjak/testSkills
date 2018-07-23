@@ -1,0 +1,41 @@
+.sly{
+  height: 400px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.slick-prev {
+  left: 20%;
+  z-index: 100;
+  width: 34px;
+  height: 61px;
+  background-image: url(../img/prev.png);
+  transition: 0.3s;
+  &:before{
+    display: none;
+  }
+  &:focus{
+    background-image: url(../img/prev.png);
+  }
+  &:hover{
+    background-image: url(../img/prev.png);
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  }
+}
+.slick-next {
+  right: 20%;
+  width: 34px;
+  height: 61px;
+  background-image: url(../img/next.png);
+  transition: 0.3s;
+  &:before{
+    display: none;
+  }
+  &:hover{
+    background-image: url(../img/next.png);
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  }
+  &:focus{
+    background-image: url(../img/next.png);
+  }
+}

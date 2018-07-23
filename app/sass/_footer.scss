@@ -1,0 +1,33 @@
+footer{
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: $grey;
+  font-family: PT,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 50px 0;
+  li{
+    list-style: none;
+    margin: 5px;
+  }
+  a{
+    color: #fff;
+    text-decoration: underline;
+
+
+  }
+}
+@media (max-width: 500px) {
+  footer{
+    flex-direction: column;
+    align-items: center;
+    .menu{
+      margin-left: -80px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  
+}

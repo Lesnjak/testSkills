@@ -1,0 +1,220 @@
+.bread-crumbs{
+  padding: 10px 0 25px;
+  a{
+    color: $grey-text;
+    font-family: PT,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.35px;
+    text-decoration: underline;
+    transition: 0.3s;
+    margin-right: 15px;
+    position: relative;
+    &:after{
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 13px;
+      background-color: $grey-text;
+      transform: rotate(30deg);
+      top: 3px;
+      right: -7px;
+
+
+    }
+    &:hover{
+      color: #000;
+    }
+    &:last-child{
+      text-decoration: none;
+      &:after{
+        display: none;
+
+
+      }
+    }
+
+  }
+}
+.all-box{
+  display: inline-flex;
+}
+.list{
+  width: 320px;
+  .fil{
+    display: none;
+    width: 50px;
+    position: absolute;
+    top: 60px;
+    right: -50px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    img{
+      width: 100%;
+    }
+  }
+  ul{
+    li{
+
+      list-style: none;
+      a{
+        color: $grey-text;
+        font-family: PT,sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        /* Text style for "Автомобили" */
+        letter-spacing: 0.45px;
+        line-height: 30px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      ul{
+        padding-left: 30px;
+        display: none;
+        li{
+          list-style: disc;
+          a{
+            font-size: 14px;
+            letter-spacing: 0.35px;
+            line-height: 22px;
+            transition: 0.3s;
+       &:hover{
+         /* Text style for "Микроволно" */
+         color: #000;
+
+       }
+          }
+          &.active>a{
+            text-decoration: underline;
+            color: #000;
+          }
+        }
+      }
+    &.active>a{
+        text-decoration: underline;
+    }
+      &.active>ul{
+        display: block;
+      }
+
+    }
+  }
+}
+.products{
+  display: inline-flex;
+  flex-wrap: wrap;
+  .item{
+    padding: 20px;
+    width: 250px;
+    background-color: #dcdcdc;
+    margin:0 6px 20px 6px;
+    p{
+      font-family: PT,sans-serif;
+      color: $grey-text;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 18px;
+      padding: 20px 0 55px;
+    }
+    span{
+      color: #444444;
+      font-family: PT,sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+    .price{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+.prod-box{
+
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #000;
+  padding-bottom: 50px;
+  a{
+
+    color: #767676;
+    font-family: PT,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 15px;
+    transition: 0.3s;
+&.active{
+  color: #444444;
+  font-size: 18px;
+}
+    &:hover{
+      font-size: 18px;
+      color: #444444;
+    }
+  }
+}
+.exel{
+  margin-top: 50px;
+  display: block;
+}
+.text-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+  p{
+    max-width:368px;
+    min-width: 300px;
+    font-family:PT,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $grey-text;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 993px) {
+  .text-box p {
+    max-width: 100% ;
+
+  }
+  .products{
+text-align: center;
+    display: block;
+  }
+  .products .item {
+    display: inline-block;
+
+    padding: 20px;
+    width: 230px;
+    img{
+      width: 100%;
+    }
+
+  }
+  .prod-box{
+    position: relative;
+  }
+  .list {
+    position: absolute;
+    z-index: 100;
+    background-color: #fff;
+    width: 240px;
+    left: -240px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    transition: 0.5s;
+    .fil{
+      display: block;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+  .list-open{
+    left: 0px;
+  }
+}
